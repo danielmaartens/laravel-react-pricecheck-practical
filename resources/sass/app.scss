@@ -4,5 +4,79 @@
 // Variables
 @import 'variables';
 
-// Bootstrap
-@import '~bootstrap/scss/bootstrap';
+@import 'number-table';
+
+body {
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.result {
+    text-align: center;
+    font-weight: bold;
+    width: 99%;
+    padding: 20px 0 20px 0;
+}
+
+.result-none {
+    background-color: #E2856E;
+    border: 2px solid darkred;
+    border-radius: 5px;
+}
+.result-success {
+    background-color: lightgreen;
+    border: 2px solid darkgreen;
+    border-radius: 5px;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.app-button {
+    border-radius: 5px;
+    text-align: center;
+    padding: 10px 20px 10px 20px;
+    width: 100%;
+    font-weight: bold;
+    color: white;
+}
+
+.submit-button-div {
+    width: 100%;
+    margin: 10px 0 10px;
+}
+
+.randomise-button-div {
+    width: 50%;
+    margin-right: 5px;
+}
+
+.reset-button-div {
+    width: 50%;
+}
+
+.submit-button {
+    background-color: #67A86D;
+    padding: 20px 0 20px 0;
+    font-size: 20px;
+    cursor: pointer;
+}
+.reset-button {
+    background-color: #6F84A4;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+}
+.randomise-button {
+    background-color: orange;
+    cursor: pointer;
+}

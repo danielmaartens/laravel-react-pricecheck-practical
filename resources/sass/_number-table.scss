@@ -1,0 +1,91 @@
+// Body
+$body-bg: #f8fafc;
+
+// Typography
+$font-family-sans-serif: 'Nunito', sans-serif;
+$font-size-base: 0.9rem;
+$line-height-base: 1.6;
+
+// Colors
+$blue: #3490dc;
+$indigo: #6574cd;
+$purple: #9561e2;
+$pink: #f66d9b;
+$red: #e3342f;
+$orange: #f6993f;
+$yellow: #ffed4a;
+$green: #38c172;
+$teal: #4dc0b5;
+$cyan: #6cb2eb;
+
+button:focus {
+    outline: 0;
+}
+
+.num-table {
+    margin: 0 auto;
+    width: 100%;
+}
+
+.num-row {
+    text-align: center;
+}
+
+.num-cell {
+    border-radius: 5px;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.num-cell-display {
+    height: 50px;
+    width: 50px;
+}
+
+.num-cell-button {
+    height: 100px;
+    width: 116px;
+    font-size: 30px;
+}
+
+.num-cell-display-inactive {
+    background: lightgray;
+    border: 2px dashed darkgray;
+    color: white;
+}
+
+.num-cell-button-inactive {
+    background: lightgray;
+    border: 2px solid darkgray;
+    color: white;
+}
+
+.num-cell-display-active {
+    background-image: -webkit-gradient(
+            linear,
+            left bottom,
+            left top,
+            color-stop(0, #6F84A4),
+            color-stop(1, #96A5BC)
+    );
+    border: 1px solid darkblue;
+    color: white;
+    cursor: pointer;
+}
+
+.num-cell-button-active {
+    //background: linear-gradient(bottom, rgb(79,142,191) 0%, rgb(102,166,214) 100%) !important;
+    border: 2px solid darkblue;
+    color: white;
+    cursor: pointer;
+    background-image: -webkit-gradient(
+            linear,
+            left bottom,
+            left top,
+            color-stop(0, #3A5683),
+            color-stop(1, #6F84A4)
+    );
+}
+
+
