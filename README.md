@@ -1,5 +1,9 @@
 # laravel-react-pricecheck-practical
 
+### Assumptions
+- all assumptions taken were from the spec.
+- No additional assumptions were considered as the spec was not ambiguous.
+
 ## Requirements
 ### Without Docker
 - Laravel
@@ -7,7 +11,7 @@
 - PHP
 
 Once you have the above installed run the following:
-```$xslt
+```
 npm run dev
 php artisan --port=3330
 ```
