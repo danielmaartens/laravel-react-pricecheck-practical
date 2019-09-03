@@ -9,9 +9,12 @@
 - Laravel
 - Node >=8
 - PHP
+- composer
 
 Once you have the above installed run the following:
 ```
+composer install
+npm install
 npm run dev
 php artisan --port=3330
 ```
