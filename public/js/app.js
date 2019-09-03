@@ -66265,8 +66265,8 @@ if (document.getElementById('what')) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/danielmaartens/drm/pricecheck/pricecheck-practical/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /Users/danielmaartens/drm/pricecheck/pricecheck-practical/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /Users/danielmaartens/drm/pricecheck/laravel-react-pricecheck-practical/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /Users/danielmaartens/drm/pricecheck/laravel-react-pricecheck-practical/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
