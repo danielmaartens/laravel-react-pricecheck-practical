@@ -18,12 +18,12 @@ class ProcessController extends Controller
         // filter all possibilities with those that have been submitted to find the missing values.
         $missingNumbers = array_values(array_filter($allNumbers, array(new NumberFilter($numbers), 'filter_missing')));
 
-        $missingNumbersString = $this->numberSeriesToString($missingNumbers);
+        $missingNumbersString = $this->numberSeriesToString($missingNumbers, $max);
 
         return $missingNumbersString;
     }
 
-    private function numberSeriesToString($numberSeries)
+    private function numberSeriesToString($numberSeries, $max)
     {
         $formattedSeries = [];
         $consecutiveNumbers = [];
@@ -46,7 +46,7 @@ class ProcessController extends Controller
                 $consecutiveNumbers = [];
 
                 // only add singleton if it is not followed by a sequential value.
-                if (array_key_exists(($i + 1), $numberSeries) && $number + 1 != $numberSeries[$i + 1]) {
+                if ((array_key_exists(($i + 1), $numberSeries) && $number + 1 != $numberSeries[$i + 1]) || $number == $max) {
                     $formattedSeries[] = $number;
                 }
             }
