@@ -16,7 +16,7 @@ Once you have the above installed run the following:
 composer install
 npm install
 npm run dev
-php artisan --port=3330
+php artisan serve --port=3330
 ```
 
 ### Using Docker
