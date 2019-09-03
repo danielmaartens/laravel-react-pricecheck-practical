@@ -13,7 +13,8 @@ class NumberFilter
         $this->numbers = $numbers;
     }
 
-    function filter_missing($value){
+    function filter_missing($value)
+    {
         if (!in_array($value, $this->numbers)) {
             return true;
         }

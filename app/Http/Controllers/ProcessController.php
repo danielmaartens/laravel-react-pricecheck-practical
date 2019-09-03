@@ -12,8 +12,10 @@ class ProcessController extends Controller
         $numbers = $request->get('numbersToProcess');
         $max = $request->get('maxNumberCount');
 
+        // construct an array of all possible numbers.
         $allNumbers = range(1, $max);
 
+        // filter all possibilities with those that have been submitted to find the missing values.
         $missingNumbers = array_values(array_filter($allNumbers, array(new NumberFilter($numbers), 'filter_missing')));
 
         $missingNumbersString = $this->numberSeriesToString($missingNumbers);
@@ -24,7 +26,6 @@ class ProcessController extends Controller
     private function numberSeriesToString($numberSeries)
     {
         $formattedSeries = [];
-        $allN = [];
         $consecutiveNumbers = [];
         $previousNumber = -1;
 
@@ -32,19 +33,25 @@ class ProcessController extends Controller
 
             $number = array_key_exists($i, $numberSeries) ? $numberSeries[$i] : null;
 
+            // Check if current missing number does not follow the previous number sequentially.
             if ($number != $previousNumber + 1) {
 
+                // only add list of consecutive numbers if it has more than one element.
                 if (!empty($consecutiveNumbers) && count($consecutiveNumbers) > 1) {
+
+                    // take the first and last values in the
                     $formattedSeries[] = $consecutiveNumbers[0] . '-' . end($consecutiveNumbers);
                 }
 
                 $consecutiveNumbers = [];
 
+                // only add singleton if it is not followed by a sequential value.
                 if (array_key_exists(($i + 1), $numberSeries) && $number + 1 != $numberSeries[$i + 1]) {
                     $formattedSeries[] = $number;
                 }
             }
 
+            // reset list of consecutive numbers.
             $consecutiveNumbers[] = $number;
             $previousNumber = $number;
         }

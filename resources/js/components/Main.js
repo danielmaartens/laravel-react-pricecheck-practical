@@ -9,7 +9,6 @@ class Main extends Component {
         super(props);
         this.state = {
             numbersToProcess: [],
-            // numbersToProcess: [2, 4, 6, 13, 15],
             maxNumberCount: 20,
             missingNumberString: '',
             requestSuccess: false,
