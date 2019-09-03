@@ -4,4 +4,4 @@ Route::get('/', function () {
     return view('index');
 });
 
-//Route::get('/process', 'ProcessController@index');
+Route::post('/process', 'ProcessController@index');
